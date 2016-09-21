@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  /*background: grey;*/
+  height: 600px;
+}
+
+.header {
+  background: green;
+  padding-top: 15px
+
+}
+
+.center {
+  background: yellow;
+}
+
+.left {
+  background: orange;
+}
+
+.right {
+  background: blue;
+}
+
+.footer {
+  background: red;
+  padding-top: 15px;
+}
+.header, .left, .right, .center, .footer {
+  flex: 1 100%;
+}
+
+.header, .footer {
+  height: 20%;
+}
+
+.left, .right, .center {
+  height: 80%;
+}
+
+@media all and (min-width: 1000px) {
+  .center {flex: 1;}
+  .left {flex: 1;}
+  .right {flex: 1;}
+  .header {order: 1}
+  .left {order: 2}
+  .center {order: 3}
+  .right {order: 4}
+  .footer {order: 5}
+}
+
+@media all and (min-width: 20px) {
+  /*.center {flex: 1;}
+  .left {flex: 1;}
+  .right {flex: 1;}*/
+  .header {order: 1; flex-grow: 1;}
+  .left {order: 2}
+  .center {order: 3}
+  .right {order: 4}
+  .footer {order: 5; flex-grow: 1;}
+}
+
+img {
+  height: 250px;
+  width: 300px;
+}
+
+h1 {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+h2 {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 40px;
+}
